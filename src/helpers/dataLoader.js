@@ -7,9 +7,8 @@ const dataLoader = async () => {
 
     const films = JSON.parse(data);
 
-    Film.insertMany(films, function (err) {
-      if (err) throw err;
-      console.log("Films created:", films);
+    Film.insertMany(films).then(() => {
+      console.log("Data loaded into DB successfully");
     });
   });
 };
