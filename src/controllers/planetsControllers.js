@@ -6,7 +6,7 @@ const getPlanets = async (req, res) => {
     const planets = await Planet.find({});
     return planets
       ? res.send(planets)
-      : res.status(404).json({ error: "404 - Not found" });
+      : res.status(404).json({ error: "404 - Planet not found" });
   } catch (error) {
     return res.status(500).send(error);
   }
