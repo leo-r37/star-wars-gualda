@@ -9,9 +9,9 @@ const filmSchema = new Schema(
     opening_crawl: String,
     director: String,
     producer: String,
-    release_date: Date,
-    created: Date,
-    edited: Date,
+    release_date: String,
+    created: String,
+    edited: String,
   },
   { timestamps: false }
 );

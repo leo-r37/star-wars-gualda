@@ -13,8 +13,8 @@ const planetSchema = new Schema(
     terrain: String,
     surface_water: Number,
     population: Number,
-    created: Date,
-    edited: Date,
+    created: String,
+    edited: String,
   },
   { timestamps: false }
 );

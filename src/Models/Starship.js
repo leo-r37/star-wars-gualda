@@ -17,8 +17,8 @@ const starshipSchema = new Schema(
     hyperdrive_rating: Number,
     MGLT: Number,
     starship_class: String,
-    created: Date,
-    edited: Date,
+    created: String,
+    edited: String,
   },
   { timestamps: false }
 );
