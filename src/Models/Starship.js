@@ -7,11 +7,11 @@ const starshipSchema = new Schema(
     name: String,
     model: String,
     manufacturer: String,
-    cost_in_credits: Number,
-    length: Number,
-    max_atmosphering_speed: Number,
+    cost_in_credits: String,
+    length: String,
+    max_atmosphering_speed: String,
     crew: String,
-    passengers: Number,
+    passengers: String,
     cargo_capacity: Number,
     consumables: String,
     hyperdrive_rating: Number,
@@ -23,4 +23,4 @@ const starshipSchema = new Schema(
   { timestamps: false }
 );
 
-module.exports = mongoose.model("Starship", planetSchema);
+module.exports = mongoose.model("Starship", starshipSchema);
