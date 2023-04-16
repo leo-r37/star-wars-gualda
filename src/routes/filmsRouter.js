@@ -17,6 +17,35 @@ const {
 
 /**
  * @swagger
+ * components:
+ *   schemas:
+ *     Film:
+ *       type: object
+ *       properties:
+ *         title:
+ *           type: string
+ *         episode_id:
+ *           type: number
+ *         opening_crawl:
+ *           type: string
+ *         director:
+ *           type: string
+ *         producer:
+ *           type: string
+ *         release_date:
+ *           type: string
+ *         created:
+ *           type: string
+ *         edited:
+ *           type: string
+ *       required:
+ *         - title
+ *         - director
+ *         - release_date
+ */
+
+/**
+ * @swagger
  * /films:
  *   get:
  *     tags:
@@ -259,35 +288,6 @@ router.post("/", postFilm);
  *                   type: string
  *             example:
  *               error: Internal server error.
- * components:
- *   schemas:
- *     Film:
- *       type: object
- *       properties:
- *         title:
- *           type: string
- *         episode_id:
- *           type: integer
- *         opening_crawl:
- *           type: string
- *         director:
- *           type: string
- *         producer:
- *           type: string
- *         release_date:
- *           type: string
- *           format: date
- *         created:
- *           type: string
- *           format: date-time
- *         edited:
- *           type: string
- *           format: date-time
- *       example:
- *         title: A New Film
- *         episode_id: 1
- *         director: John Doe
- *         release_date: 2022-01-01
  */
 router.put("/:id", putFilm);
 
